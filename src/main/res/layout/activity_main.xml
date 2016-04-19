@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:orientation="vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TableLayout
+            android:id="@+id/wifi_tl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="1.0dip"
+            android:shrinkColumns="0"
+            android:stretchColumns="0"
+             >
+
+            <TableRow
+                android:id="@+id/wifi_tr"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_itemtop_press"
+                android:clickable="true"
+                android:paddingBottom="16.0dip"
+                android:paddingTop="16.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:id="@+id/wifi_TextView"
+                    android:text="wifi未开启"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:id="@+id/wifi_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@mipmap/shut"
+                    android:gravity="center_vertical" />
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_itembottom_press"
+                android:clickable="true"
+                android:paddingBottom="16.0dip"
+                android:paddingTop="16.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:text="ip:"
+                    android:id="@+id/ip"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/ip_TextView"
+                    android:layout_toRightOf="@id/ip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="0.0.0.0"
+                    android:textSize="16.0sp"
+                    android:textColor="#ff333333"
+                    android:textIsSelectable="true"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <TableRow
+                android:id="@+id/adb_tr"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_itemtop_press"
+                android:clickable="true"
+                android:paddingBottom="16.0dip"
+                android:paddingTop="16.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:id="@+id/adb_TextView"
+                    android:text="网络调试未开启"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:id="@+id/adb_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@mipmap/shut"
+                    android:gravity="center_vertical" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@drawable/more_itembottom_press"
+                android:clickable="true"
+                android:paddingBottom="16.0dip"
+                android:paddingTop="16.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:drawablePadding="10.0dip"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="17.0dip"
+                    android:id="@+id/port_TextView"
+                    android:text="ip端口:"
+                    android:textColor="#ff333333"
+                    android:textSize="16.0sp" />
+
+                <!--<ImageView
+                    android:id="@+id/usb_iv_autoMount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@mipmap/shut"
+                    android:gravity="center_vertical" />-->
+            </TableRow>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:id="@+id/adb_et"
+                android:paddingBottom="16.0dip"
+                android:paddingTop="16.0dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="17.0dip"
+                android:paddingRight="17.0dp"
+                android:background="@drawable/more_itemtop_press"
+                android:text="adb shell"
+
+                />
+            <!--android:editable="false"-->
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
